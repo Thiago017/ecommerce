@@ -5,6 +5,11 @@ import java.lang.reflect.Field;
 public class EntityUpdater {
 
     public static void updateFields(Object target, Object source) {
+
+        if (target.getClass() != source.getClass()) {
+            throw new IllegalAccessError("target and source are from different classes");
+        }
+
         Class<?> targetClass = target.getClass();
         Field[] fields = targetClass.getDeclaredFields();
 

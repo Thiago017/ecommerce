@@ -31,6 +31,11 @@ public class UserService {
         return convertToDto(user);
     }
 
+    public void delete(String id) {
+        User user = findById(id);
+        repository.delete(user);
+    }
+
     public User findById(String id) {
         return repository.findById(id).orElseThrow(() -> new UserNotFoundException(id));
     }

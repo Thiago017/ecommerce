@@ -1,0 +1,23 @@
+@url=http://localhost:8080
+
+###
+POST {{url}}/categories
+Content-Type: application/json
+
+{
+    "name": "Produtos domésticos"
+}
+
+###
+GET {{url}}/categories/65c127a4e7f6690e1a114f12
+
+###
+PUT {{url}}/categories/65c127a4e7f6690e1a114f12
+Content-Type: application/json
+
+{
+    "name": "Tecnologias"
+}
+
+###
+DELETE {{url}}/categories/65c127a4e7f6690e1a114f12

@@ -24,7 +24,7 @@ public class GlobalExceptionHandler {
         return ResponseEntity.status(status).body(err);
     }
 
-    @ExceptionHandler({ UserNotFoundException.class })
+    @ExceptionHandler({ EntityNotFoundException.class })
     public ResponseEntity<StandardError> notFound(RuntimeException e, HttpServletRequest request) {
         HttpStatus status = HttpStatus.NOT_FOUND;
         StandardError err = new StandardError(Instant.now(), status.value(), e.getMessage(), request.getRequestURI());

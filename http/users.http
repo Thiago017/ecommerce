@@ -1,0 +1,29 @@
+@url=http://localhost:8080
+
+###
+GET {{url}}/users
+
+###
+POST {{url}}/users
+Content-Type: application/json
+
+{
+    "name": "Alex grey",
+    "password": "alex123",
+    "email": "alexgrey@hotmail.com",
+    "document": "123.123.123-33"
+}
+
+###
+PUT {{url}}/users/65c122e0e7f6690e1a114ee8
+Content-Type: application/json
+
+{
+    "name": "Alex grey2",
+    "password": "alex123",
+    "email": "alexgrey@hotmail.com",
+    "document": "123.123.123-33"
+}
+
+###
+DELETE  {{url}}/users/65c122e0e7f6690e1a114ee8

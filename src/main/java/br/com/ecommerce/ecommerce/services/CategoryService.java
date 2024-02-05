@@ -13,8 +13,8 @@ public class CategoryService {
     @Autowired
     private CategoryRepository repository;
 
-    public Category create(Category data) {
-        return repository.save(data);
+    public Category create(Category categoryData) {
+        return repository.save(categoryData);
     }
 
     public Category findById(String id) {

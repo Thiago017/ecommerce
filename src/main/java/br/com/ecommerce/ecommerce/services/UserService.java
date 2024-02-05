@@ -31,6 +31,7 @@ public class UserService {
     }
 
     public UserDto update(String id, User user) {
+        findById(id);
         user.setId(id);
         repository.save(user);
         return new UserDto(user);

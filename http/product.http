@@ -1,0 +1,19 @@
+@url=http://localhost:8080/products
+
+###
+POST {{url}}
+Content-Type: application/json
+
+{
+  "name": "Macbook Pro m3 18GB",
+  "category": {
+    "$ref": "category",
+    "id": "65c132f7e7f6690e1a114f48"
+  },
+  "price": 16842,
+  "quantityInStock": 3
+}
+
+###
+GET {{url}}/65c137d0e7f6690e1a114f66
+Content-Type: application/json

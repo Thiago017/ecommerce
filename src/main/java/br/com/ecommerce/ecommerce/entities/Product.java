@@ -20,18 +20,26 @@ import lombok.Setter;
 public class Product implements Serializable {
 
     private String id;
-    
+
     @NotNull(message = "name must not be null")
     private String name;
-    
+
     @DBRef
     @NotNull(message = "category must not be null")
     private Category category;
-    
+
     @NotNull(message = "price must not be null")
     private Double price;
-    
+
     @NotNull(message = "quantityInStock must not be null")
     private Integer quantityInStock;
 
+    public void increaseStock() {
+        quantityInStock += 1;
+    }
+
+    public void decreaseStock() {
+        quantityInStock -= 1;
+    }
+    
 }

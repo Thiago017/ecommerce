@@ -5,7 +5,7 @@ POST {{url}}/categories
 Content-Type: application/json
 
 {
-    "name": "Produtos domésticos"
+    "name": "Computadores"
 }
 
 ###

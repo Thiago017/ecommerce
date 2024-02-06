@@ -21,4 +21,16 @@ public class ProductService {
         return repository.findById(id).orElseThrow(() -> new EntityNotFoundException(id));
     }
 
+    public Product update(String id, Product productData) {
+        findById(id);
+        productData.setId(id);
+        repository.save(productData);
+        return productData;
+    }
+
+    public void delete(String id) {
+        Product product = findById(id);
+        repository.delete(product);
+    }
+
 }

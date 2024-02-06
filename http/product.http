@@ -5,15 +5,33 @@ POST {{url}}
 Content-Type: application/json
 
 {
-  "name": "Macbook Pro m3 18GB",
-  "category": {
-    "$ref": "category",
-    "id": "65c132f7e7f6690e1a114f48"
-  },
-  "price": 16842,
-  "quantityInStock": 3
+    "name": "Macbook Pro m3 18GB",
+    "category": {
+        "$ref": "category",
+        "id": "65c132f7e7f6690e1a114f48"
+    },
+    "price": 16842,
+    "quantityInStock": 3
 }
 
 ###
 GET {{url}}/65c137d0e7f6690e1a114f66
+Content-Type: application/json
+
+###
+PUT {{url}}/65c137d0e7f6690e1a114f66
+Content-Type: application/json
+
+{
+    "name": "Macbook Pro m3 18GB 2023",
+    "category": {
+        "$ref": "category",
+        "id": "65c212dfd4702d1bd7c3d4e8"
+    },
+    "price": 16842,
+    "quantityInStock": 3
+}
+
+###
+DELETE {{url}}/65c135d7e7f6690e1a114f5a
 Content-Type: application/json

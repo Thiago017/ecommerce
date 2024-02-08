@@ -15,7 +15,7 @@ Content-Type: application/json
 }
 
 ###
-GET {{url}}/65c137d0e7f6690e1a114f66
+GET {{url}}/65c2219790b657255a0ee6e9
 Content-Type: application/json
 
 ###
@@ -25,13 +25,13 @@ Content-Type: application/json
 {
     "name": "Macbook Pro m3 18GB 2023",
     "category": {
-        "$ref": "category",
-        "id": "65c212dfd4702d1bd7c3d4e8"
+        "$ref": "categories",
+        "id": "65c21e7a90b657255a0ee6d0"
     },
     "price": 16842,
     "quantityInStock": 3
 }
 
 ###
-DELETE {{url}}/65c135d7e7f6690e1a114f5a
+DELETE {{url}}/65c1369fe7f6690e1a114f5b
 Content-Type: application/json

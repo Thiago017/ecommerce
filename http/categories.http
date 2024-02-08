@@ -1,18 +1,18 @@
-@url=http://localhost:8080
+@url=http://localhost:8080/categories
 
 ###
 POST {{url}}/categories
 Content-Type: application/json
 
 {
-    "name": "Computadores"
+    "name": "Produtos de limpeza"
 }
 
 ###
-GET {{url}}/categories/65c127a4e7f6690e1a114f12
+GET {{url}}/65c127a4e7f6690e1a114f12
 
 ###
-PUT {{url}}/categories/65c127a4e7f6690e1a114f12
+PUT {{url}}/65c127a4e7f6690e1a114f12
 Content-Type: application/json
 
 {
@@ -20,4 +20,4 @@ Content-Type: application/json
 }
 
 ###
-DELETE {{url}}/categories/65c127a4e7f6690e1a114f12
+DELETE {{url}}/65c127a4e7f6690e1a114f12

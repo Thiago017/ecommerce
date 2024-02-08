@@ -1,12 +1,16 @@
 package br.com.ecommerce.ecommerce.entities;
 
 import java.io.Serializable;
+import java.util.ArrayList;
+import java.util.List;
 
 import org.springframework.data.annotation.Id;
 import org.springframework.data.mongodb.core.index.Indexed;
+import org.springframework.data.mongodb.core.mapping.DBRef;
 import org.springframework.data.mongodb.core.mapping.Document;
 
 import jakarta.validation.constraints.NotNull;
+import lombok.AccessLevel;
 import lombok.AllArgsConstructor;
 import lombok.Getter;
 import lombok.NoArgsConstructor;
@@ -37,10 +41,14 @@ public class User implements Serializable {
     @NotNull(message = "document name must not be null")
     private String document;
 
-    public void encodePassword() {
-        // BCryptPasswordEncoder encoder = new BCryptPasswordEncoder();
-        // BCryptPasswordEncoder encoder = new BCryptPasswordEncoder();
-        // password = encoder.encode(password);
-    }
+    @DBRef(lazy = true)
+    @Setter(AccessLevel.NONE)
+    private List<Order> orders = new ArrayList<>();
+
+    // public void encodePassword() {
+    //     BCryptPasswordEncoder encoder = new BCryptPasswordEncoder();
+    //     BCryptPasswordEncoder encoder = new BCryptPasswordEncoder();
+    //     password = encoder.encode(password);
+    // }
 
 }

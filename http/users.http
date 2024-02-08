@@ -1,7 +1,10 @@
-@url=http://localhost:8080
+@url=http://localhost:8080/users
+
+### list all users
+GET {{url}}
 
 ###
-GET {{url}}/users
+GET {{url}}/65c4d46bbbfbc568d87478c7
 
 ###
 POST {{url}}/users
@@ -15,7 +18,7 @@ Content-Type: application/json
 }
 
 ###
-PUT {{url}}/users/65c122e0e7f6690e1a114ee8
+PUT {{url}}/users/65c4c0c3c82f515c6a777625
 Content-Type: application/json
 
 {

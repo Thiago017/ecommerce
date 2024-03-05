@@ -1,6 +1,7 @@
 package br.com.ecommerce.ecommerce.resources;
 
 import java.net.URI;
+import java.util.List;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.ResponseEntity;
@@ -24,6 +25,12 @@ public class UserResource {
 
     @Autowired
     private UserService service;
+
+    @GetMapping
+    public ResponseEntity<List<User>> findAll() {
+        List<User> users = service.findAll();
+        return ResponseEntity.ok().body(users);
+    }
 
     @PostMapping
     public ResponseEntity<Void> create(@RequestBody User userData) {
